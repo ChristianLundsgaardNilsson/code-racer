@@ -11,7 +11,7 @@ interface CustomRoute extends Route {
 
 export const routes: CustomRoute[] = [
     {
-        path: 'landing',
+        path: '',
         pathMatch: 'full',
         loadComponent: () => import('./pages/landing/landing.component')
             .then(m => m.LandingComponent),
@@ -21,6 +21,6 @@ export const routes: CustomRoute[] = [
     },
     {
         path: '**',
-        redirectTo: 'landing',
+        redirectTo: '',
     },
 ];
