@@ -3,10 +3,10 @@
 @source './**/*.{html,ts,css}';
 
 /* @theme { */
-  /* --font-*: initial; */
-  /* --font-sans: Arial, Verdana, sans-serif; */
+/* --font-*: initial; */
+/* --font-sans: Arial, Verdana, sans-serif; */
 
-  /* --color-primary: #f18f01; */
+/* --color-primary: #f18f01; */
 /* } */
 
 /*
@@ -31,7 +31,10 @@
   }
 
   h1 {
-    @apply text-5xl;
+    @apply text-8xl;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    word-spacing: -0.2em;
   }
 
   h2 {
@@ -51,5 +54,6 @@
 html,
 body {
   @apply h-full;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
 }
-
