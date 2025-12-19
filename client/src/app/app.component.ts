@@ -8,5 +8,10 @@ import { RouterOutlet } from '@angular/router';
     styleUrl: './app.component.css',
 })
 export class AppComponent {
-    constructor() {}
+    navItems = [
+        { label: 'Play', href: '#' },
+        { label: 'Leaderboard', href: '#' },
+        { label: 'Learn more', href: '#' },
+        { label: 'About', href: '#' },
+    ];
 }
