@@ -1,36 +1,36 @@
+<header class="mb-10 flex items-center justify-between border-b border-neutral-300 bg-white/20 px-10 py-4">
+  <!-- LOGO -->
+  <a class="font-bold" href="">CodeRacer</a>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul class="flex gap-6">
+      @for (item of navItems; track item.label) {
+        <li>
+          <a class="group flex items-center justify-center gap-1.5" [href]="item.href">
+            <span>{{ item.label }}</span>
+            <div class="flex h-3 w-3 items-center justify-center transition-transform group-hover:rotate-45">
+              <svg fill="none" viewBox="0 0 10 9" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  clip-rule="evenodd"
+                  d="M4.51172 5.09998V9H5.71172V5.09998H9.61719V3.89998L5.71172 3.89998V0H4.51172V3.89998L0.617188 3.89998V5.09998H4.51172Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <!-- CALL TO ACTION -->
+  <div>
+    <button>Contact</button>
+  </div>
+</header>
 <main class="grid h-[100vh] grid-cols-1 grid-rows-[1fr] overflow-y-auto">
-  <header class="mb-10 flex items-center justify-between border-b border-neutral-300 bg-white/20 px-10 py-4">
-    <!-- LOGO -->
-    <div class="font-bold">CodeRacer</div>
-
-    <!-- NAVIGATION -->
-    <nav>
-      <ul class="flex gap-6">
-        @for (item of navItems; track item.label) {
-          <li>
-            <a class="group flex items-center justify-center gap-1.5" [href]="item.href">
-              <span>{{ item.label }}</span>
-              <div class="flex h-3 w-3 items-center justify-center transition-transform group-hover:rotate-45">
-                <svg fill="none" viewBox="0 0 10 9" width="100%" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    clip-rule="evenodd"
-                    d="M4.51172 5.09998V9H5.71172V5.09998H9.61719V3.89998L5.71172 3.89998V0H4.51172V3.89998L0.617188 3.89998V5.09998H4.51172Z"
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-              </div>
-            </a>
-          </li>
-        }
-      </ul>
-    </nav>
-
-    <!-- CALL TO ACTION -->
-    <div>
-      <button>Contact</button>
-    </div>
-  </header>
   <div>
     <router-outlet></router-outlet>
   </div>

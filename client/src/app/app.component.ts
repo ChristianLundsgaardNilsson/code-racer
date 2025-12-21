@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
     navItems = [
-        { label: 'Play', href: '#' },
+        { label: 'Play', href: 'racetrack' },
         { label: 'Leaderboard', href: '#' },
         { label: 'Learn more', href: '#' },
         { label: 'About', href: '#' },

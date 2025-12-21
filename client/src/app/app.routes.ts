@@ -20,6 +20,15 @@ export const routes: CustomRoute[] = [
         },
     },
     {
+        path: 'racetrack',
+        pathMatch: 'full',
+        loadComponent: () => import('./pages/racetrack/racetrack.component')
+            .then(m => m.RacetrackComponent),
+        data: {
+            id: 'racetrack',
+        },
+    },
+    {
         path: '**',
         redirectTo: '',
     },
