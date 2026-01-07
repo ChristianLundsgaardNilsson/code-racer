@@ -24,7 +24,51 @@
   </div>
 
   <!-- CODE EDITOR SETTINGS -->
-  <div class="bg-white p-4">Settings, themes etc</div>
+  <div class="flex items-center gap-6 bg-white p-4">
+    <!-- Theme Dropdown -->
+    <div class="flex items-center gap-2">
+      <label class="text-sm font-medium text-neutral-700" for="theme">Theme:</label>
+      <select
+        id="theme"
+        class="rounded border border-neutral-300 px-3 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        (change)="onThemeChange()"
+        [(ngModel)]="selectedTheme"
+      >
+        <optgroup label="Dark Themes">
+          <option [value]="theme.value" *ngFor="let theme of darkThemes">{{ theme.name }}</option>
+        </optgroup>
+        <optgroup label="Light Themes">
+          <option [value]="theme.value" *ngFor="let theme of lightThemes">{{ theme.name }}</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <!-- Font Family Dropdown -->
+    <div class="flex items-center gap-2">
+      <label class="text-sm font-medium text-neutral-700" for="fontFamily">Font:</label>
+      <select
+        id="fontFamily"
+        class="rounded border border-neutral-300 px-3 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        (change)="onFontFamilyChange()"
+        [(ngModel)]="selectedFontFamily"
+      >
+        <option [value]="font" *ngFor="let font of fontFamilies">{{ font }}</option>
+      </select>
+    </div>
+
+    <!-- Font Size Dropdown -->
+    <div class="flex items-center gap-2">
+      <label class="text-sm font-medium text-neutral-700" for="fontSize">Size:</label>
+      <select
+        id="fontSize"
+        class="rounded border border-neutral-300 px-3 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        (change)="onFontSizeChange()"
+        [(ngModel)]="selectedFontSize"
+      >
+        <option [value]="size" *ngFor="let size of fontSizes">{{ size }}</option>
+      </select>
+    </div>
+  </div>
 
   <!-- CODE EDITOR AREA -->
   <div #editorContainer class="bg-neutral-900"></div>
